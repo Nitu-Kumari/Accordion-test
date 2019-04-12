@@ -23,6 +23,71 @@
   color: #61dafb;
 }
 
+
+* {
+  margin: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  margin-top: 6rem;
+  font-size: 20px;
+  width: 100%;
+}
+
+
+h1{
+  margin-left: 50px;
+  text-align: center;
+}
+
+
+
+.holder {
+  list-style: none;
+  width: 70%;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.title {
+  background: #00d7825c;
+  padding: 1rem;
+  box-shadow: -1px -1px 3px 0px #1a1a1a4f;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.detail {
+  overflow: hidden;
+  padding: 0 0.6rem;
+  background: whitesmoke;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -31,3 +96,4 @@
     transform: rotate(360deg);
   }
 }
+

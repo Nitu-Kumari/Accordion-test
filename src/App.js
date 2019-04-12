@@ -1,28 +1,41 @@
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import data from "./data";
+import List from "./list";
 
-class App extends Component {
+class App extends React.Component {
+  state = {
+    currentIndex: -1,
+  }
+
+  handleChange = i => {
+    this.setState({
+      currentIndex: i
+    });
+  };
+
   render() {
+    const { handleChange } = this;
+    const { currentIndex,isActive  } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <div>
+        <h1>Accordion Interactivity</h1>
+      {data.map(function(e, i) {
+        return(
+        <List 
+        title={e.title}
+         detail={e.detail}
+         handleChange={handleChange}
+          key={i}
+          index={i} 
+          currentIndex={currentIndex}
+          />
+        );
+      })}
+    </div>
     );
   }
 }
-
 export default App;
